@@ -91,3 +91,34 @@ $(document).ready(function(event) {
       $("#pizza-details-dropdown").click(function() {
         $("#pizza-details").toggle();
       });
+      /////Side Orders
+  var newSideOrder = new Order();
+  $("#breadsticks").click(function() {
+    newSideOrder.sideCost();
+    totalPriceArray.push(newSideOrder.sidePrice);
+    $("#final-cost").text(newSideOrder.finalCost());
+    $("#sides-dropdown").show();
+    $("#sides-details").append("<ul><li>" + "3 garlic breadsticks" + "</li></ul>");
+  });
+  $("#brownie").click(function() {
+    newSideOrder.sideCost();
+    totalPriceArray.push(newSideOrder.sidePrice);
+    $("#final-cost").text(newSideOrder.finalCost());
+    $("#sides-dropdown").show();
+    $("#sides-details").append("<ul><li>" + "1 jumbo, double-chocolate brownie" + "</li></ul>");
+  });
+  $("#soda").click(function() {
+    newSideOrder.sideCost();
+    totalPriceArray.push(newSideOrder.sidePrice);
+    $("#final-cost").text(newSideOrder.finalCost());
+    $("#sides-dropdown").show();
+    $("#sides-details").append("<ul><li>" + "16oz., root-beer italian soda" + "</li></ul>");
+  });
+  $("#sides-dropdown").click(function() {
+    $("#sides-details").toggle();
+  });
+///Checkout Btn
+  $("#checkout-btn").click(function() {
+    location.reload();
+  });
+});
