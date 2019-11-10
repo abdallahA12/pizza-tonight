@@ -31,3 +31,43 @@ Order.prototype.pizzaCost = function () {
     this.pizzaPrice += this.meat;
     return this.pizzaPrice;
   }
+  Order.prototype.sideCost = function () {
+    return this.sidePrice;
+  }
+  Order.prototype.finalCost = function () {
+    var cartTotalPrice = 0;
+    for (var arrayElement = 0; arrayElement < totalPriceArray.length; arrayElement ++) {
+      cartTotalPrice += totalPriceArray[arrayElement]; //////////////////////IMPORTANT!!! How to add contents of an array together
+    }
+    return cartTotalPrice;
+  }
+  function Address (streetAddress, city, state, zipcode) {
+    this.streetAddress = streetAddress;
+    this.city = city;
+    this.state = state;
+    this.zipcode = zipcode;
+    this.deliveryAddress = (streetAddress + "  " + city + ", " + state + "  " + zipcode);
+  }
+  //User Interface Logic
+$(document).ready(function(event) {
+    /////Landing Page Btns
+      $("#pickup-btn").click(function() {
+        $("#order-content").show();
+        $("#landing-content").hide();
+        $("#delivery-option").text("PICKUP BY CUSTOMER");
+      });
+      $("#delivery-btn").click(function() {
+        $("#address").show();
+        $("#pickup-btn,#delivery-btn,#landing-tagline").hide();
+      });
+      $("form#address-form").submit(function(event) {
+        event.preventDefault();
+        var streetAddress = $("input#street-add").val();
+        var city = $("input#city-add").val();
+        var state = $("select#state-select").val();
+        var zipcode = $("input#zip-add").val();
+        var newAddress = new Address(streetAddress, city, state, zipcode)
+        $("#order-content").show();
+        $("#landing-content").hide();
+        $("#delivery-option").text("DELIVER TO: " + newAddress.deliveryAddress);
+      });
