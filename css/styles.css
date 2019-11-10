@@ -109,3 +109,43 @@ body {
   select {
     margin-top: 15px;
   }
+  /*<--------------------Cart Details Styling---------------->*/
+
+#order-details, #default-pizza-details {
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  p {
+    margin-top: 5px;
+  }
+  
+  ul {
+    font-size: 13pt;
+  }
+  
+  /*<--------------------Default Orders Styling---------------->*/
+  #default-pizzas {
+    display: none;
+  }
+  
+  .pizza-option, .side-option {
+    width: 170px;
+    height: 180px;
+    font-size: 20pt;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #cheese-default-size, #pep-default-size, #veggie-default-size {
+    display: none;
+  }
+  
+  .indiv-pizza-default {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  #footer {
+    margin-top: 100px;
+  }
