@@ -61,3 +61,51 @@ body {
     margin-right: 50px;
     margin-bottom: 50px;
   }
+  #order-proceed-btn {
+    font-size: 20pt;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  
+  #checkout-btn {
+    font-size: 20pt;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  
+  #submit-custom-pizza {
+    margin-bottom: 35px;
+  }
+  /*<--------------------Display: None---------------->*/
+
+#address, #pizza-details-dropdown, #pizza-details, #default-pizza-dropdown, #default-pizza-details, #sides-dropdown, #sides-details {
+    display: none;
+  }
+  
+  /*<--------------------Custom Pizza Form Styling---------------->*/
+  
+  #form-header {
+    color: #FFFFFF;
+    font-size: 20pt;
+    margin-bottom: 35px;
+  }
+  #form-content {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-left: -35px;
+  }
+  
+  #custom-pizza {
+    /*display: none;*/
+    margin-top: 30px;
+    border-style: solid;
+    border-color: #006699;
+    background-color: #006699;
+    border-radius: 15%;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  
+  select {
+    margin-top: 15px;
+  }
