@@ -8,3 +8,11 @@ body {
   #nav {
     padding-bottom: 3px;
   }
+  /*<--------------------Content Styling---------------->*/
+
+#landing-content {
+    color: #000000;
+    background-color: #FFFFFF;
+    margin-top: 200px;
+    text-align: center;
+  }
