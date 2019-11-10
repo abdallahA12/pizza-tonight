@@ -27,3 +27,14 @@ body {
   #price-content {
     margin-top: 100px;
   }
+  .page-header {
+    font-size: 65pt;
+    margin-bottom: 75px;
+    padding-bottom: 35px;
+  }
+  
+  #address-form {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
