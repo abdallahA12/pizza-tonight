@@ -2,33 +2,33 @@
 var totalPriceArray = []; //Only global variable in code
 function Order (customSize, cheese) {
   this.customSize = customSize;
-  this.sauce = 150;
-  this.cheese = cheese;
-  this.veggie1 = 150;
-  this.veggie2 = 150;
-  this.meat = 150;
+  this.option = 150;
+  this.crust = cheese;
+  this.toppings = 150;
+  this.number = 150;
+  this.delivery = 150;
   this.pizzaPrice = 150;
   this.sidePrice = 150;
 }
 Order.prototype.pizzaCost = function () {
     if (this.customSize === "Small 10 in.") {
-      this.pizzaPrice += 6;
+      this.pizzaPrice += 500;
     } else if (this.customSize === "Medium 14 in.") {
-      this.pizzaPrice += 9;
+      this.pizzaPrice += 800;
     } else if (this.customSize === "Large 18 in.") {
-      this.pizzaPrice += 12;
+      this.pizzaPrice += 1000;
     }
-    if (this.cheese === "cheese") {
-      this.pizzaPrice += 1;
-    } else if (this.cheese === "light cheese") {
-      this.pizzaPrice += 0.5;
-    } else if (this.cheese === "extra cheese") {
-      this.pizzaPrice += 1.5;
+    if (this.crust === "crispy") {
+      this.pizzaPrice += 150;
+    } else if (this.crust === "stuffed") {
+      this.pizzaPrice += 150;
+    } else if (this.crust === "gluten-free") {
+      this.pizzaPrice += 150;
     }
-    this.pizzaPrice += this.sauce;
-    this.pizzaPrice += this.veggie1;
-    this.pizzaPrice += this.veggie2;
-    this.pizzaPrice += this.meat;
+    this.pizzaPrice += this.option;
+    this.pizzaPrice += this.toppings;
+    this.pizzaPrice += this.number;
+    this.pizzaPrice += this.delivery;
     return this.pizzaPrice;
   }
   Order.prototype.sideCost = function () {
@@ -74,45 +74,45 @@ $(document).ready(function(event) {
       $("form#custom-pizza").submit(function(event) {
         event.preventDefault();
         var customSize = $("select#size").val();
-        var sauce = $("select#sauce").val();
-        var cheese = $("select#cheese").val();
-        var veggie1 = $("select#veggie1").val();
-        var veggie2 = $("select#veggie2").val();
-        var meat = $("select#meat").val();
-        var pizzaDetails = (customSize + " - " + sauce + ", " + cheese + ", " + veggie1 + ", " + veggie2 + ", " + meat);
+        var option = $("select#sauce").val();
+        var crust = $("select#cheese").val();
+        var toppings = $("select#veggie1").val();
+        var number = $("select#veggie2").val();
+        var delivery = $("select#meat").val();
+        var pizzaDetails = (customSize + " - " + option + ", " + crust + ", " + toppings + ", " + number + ", " + delivery);
         var newPizzaOrder = new Order(customSize, cheese);
         newPizzaOrder.pizzaCost();
         totalPriceArray.push(newPizzaOrder.pizzaPrice);
         $("#pizza-details-dropdown").show();
         $("#final-cost").text(newPizzaOrder.finalCost());
         $("#pizza-details").append("<ul><li>" + pizzaDetails + "</li></ul>");
-        $("#size, #sauce, #cheese, #veggie1, #veggie2, #meat").val("");
+        $("#size, #option, #crust, #toppings, #number, #delivery").val("");
       });
       $("#pizza-details-dropdown").click(function() {
         $("#pizza-details").toggle();
       });
       /////Side Orders
   var newSideOrder = new Order();
-  $("#breadsticks").click(function() {
-    newSideOrder.sideCost();
-    totalPriceArray.push(newSideOrder.sidePrice);
-    $("#final-cost").text(newSideOrder.finalCost());
-    $("#sides-dropdown").show();
-    $("#sides-details").append("<ul><li>" + "3 garlic breadsticks" + "</li></ul>");
-  });
-  $("#brownie").click(function() {
-    newSideOrder.sideCost();
-    totalPriceArray.push(newSideOrder.sidePrice);
-    $("#final-cost").text(newSideOrder.finalCost());
-    $("#sides-dropdown").show();
-    $("#sides-details").append("<ul><li>" + "1 jumbo, double-chocolate brownie" + "</li></ul>");
-  });
   $("#soda").click(function() {
     newSideOrder.sideCost();
     totalPriceArray.push(newSideOrder.sidePrice);
     $("#final-cost").text(newSideOrder.finalCost());
     $("#sides-dropdown").show();
-    $("#sides-details").append("<ul><li>" + "16oz., root-beer italian soda" + "</li></ul>");
+    $("#sides-details").append("<ul><li>" + "soda" + "</li></ul>");
+  });
+  $("#veges").click(function() {
+    newSideOrder.sideCost();
+    totalPriceArray.push(newSideOrder.sidePrice);
+    $("#final-cost").text(newSideOrder.finalCost());
+    $("#sides-dropdown").show();
+    $("#sides-details").append("<ul><li>" + "veges" + "</li></ul>");
+  });
+  $("#mayonnaise").click(function() {
+    newSideOrder.sideCost();
+    totalPriceArray.push(newSideOrder.sidePrice);
+    $("#final-cost").text(newSideOrder.finalCost());
+    $("#sides-dropdown").show();
+    $("#sides-details").append("<ul><li>" + "mayonnaise" + "</li></ul>");
   });
   $("#sides-dropdown").click(function() {
     $("#sides-details").toggle();

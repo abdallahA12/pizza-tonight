@@ -1,151 +1,18 @@
-body {
-    font-family: serif;
-    color: #000000;
-  }
-  .navbar-inverse {
-    background-color: #000000;
-  }
-  #nav {
-    padding-bottom: 3px;
-  }
-  /*<--------------------Content Styling---------------->*/
-
-#landing-content {
-    color: #000000;
-    background-color: #FFFFFF;
-    margin-top: 200px;
-    text-align: center;
-  }
-  #order-content {
-    display: none;
-    color: #000000;
-    background-color: #FFFFFF;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    text-align: center;
-  }
-  #price-content {
-    margin-top: 100px;
-  }
-  .page-header {
-    font-size: 65pt;
-    margin-bottom: 75px;
-    padding-bottom: 35px;
-  }
-  
-  #address-form {
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-  .address-spacing {
-    margin-bottom: 20px;
-  }
-  
-  #state-select {
-    margin-top: 0px;
-  }
-  /*<--------------------Btn Styling---------------->*/
-
-#pickup-btn, #delivery-btn, #custom-pizza-btn, #submit-custom-pizza {
-    font-size: 20pt;
-    margin-top: 30px;
-  }
-  
-  #custom-pizza-btn {
-    display: none;
-  }
-  
-  #pickup-btn, #delivery-btn {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-  }
-  #order-proceed-btn {
-    font-size: 20pt;
-    margin-top: 50px;
-    margin-bottom: 100px;
-  }
-  
-  #checkout-btn {
-    font-size: 20pt;
-    margin-top: 50px;
-    margin-bottom: 40px;
-  }
-  
-  #submit-custom-pizza {
-    margin-bottom: 35px;
-  }
-  /*<--------------------Display: None---------------->*/
-
-#address, #pizza-details-dropdown, #pizza-details, #default-pizza-dropdown, #default-pizza-details, #sides-dropdown, #sides-details {
-    display: none;
-  }
-  
-  /*<--------------------Custom Pizza Form Styling---------------->*/
-  
-  #form-header {
-    color: #FFFFFF;
-    font-size: 20pt;
-    margin-bottom: 35px;
-  }
-  #form-content {
-    margin-top: 25px;
-    margin-bottom: 50px;
-    margin-left: -35px;
-  }
-  
-  #custom-pizza {
-    /*display: none;*/
-    margin-top: 30px;
-    border-style: solid;
-    border-color: #006699;
-    background-color: #006699;
-    border-radius: 15%;
-    margin-left: 70px;
-    margin-right: 70px;
-  }
-  
-  select {
-    margin-top: 15px;
-  }
-  /*<--------------------Cart Details Styling---------------->*/
-
-#order-details, #default-pizza-details {
-    text-align: left;
-    margin-top: 10px;
-  }
-  
-  p {
-    margin-top: 5px;
-  }
-  
-  ul {
-    font-size: 13pt;
-  }
-  
-  /*<--------------------Default Orders Styling---------------->*/
-  #default-pizzas {
-    display: none;
-  }
-  
-  .pizza-option, .side-option {
-    width: 170px;
-    height: 180px;
-    font-size: 20pt;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  #cheese-default-size, #pep-default-size, #veggie-default-size {
-    display: none;
-  }
-  
-  .indiv-pizza-default {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  #footer {
-    margin-top: 100px;
-  }
+#custom-pizza {
+  margin-left: 34%;
+}
+#order-content {
+margin-left: 8%;
+}
+#additions {
+margin-left: 40%;
+}
+#price-content {
+  margin-left: 40%;
+}
+.navbar-text pull-left{
+margin-left: 35%;
+}
+#body {
+  background-color: beige;
+}

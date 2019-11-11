@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link Bootstrap, Font Awesome, CSS, jQuery and JavaScript Start -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquerry.js"></script>
+<!-- Link Bootstrap, Font Awesome, CSS, jQuery and JavaScript End -->
+    <title>PIZZA-TONIGHT</title>
+</head>
+<body>
+    <section>
+    <div class="nav">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+              <div class="container">
+                <a href="index.html"><div class="navbar-text pull-left"><h3>PIZZA-TONIGHT</h3></div></a>
+                <div class="navbar-text pull-right"><a href="image/twitter.png"><i class="fa fa-twitter fa-4x"></i></a></div>
+                <div class="navbar-text pull-right"><a href="image/pinterest.png"><i class="fa fa-pinterest fa-4x"></i></a></div>
+              </div>
+            </nav>
+          </div>
+        </section>
+      <se
+  
+<!-- Order Content Start -->
+    <div class="jumbotron" id="order-content">
+            <h1 class="page-header">Order Options</h1>
+            <div class="row">
+              <div class="col-xs-6">
+                <h2>Pizza</h2>
+                <div class="row container" id="default-pizzas">
+                  <div class="col-xs-4">
+                    <button type="btn" class="btn btn-success pizza-option" id="cheese-default">Cheese Pizza</button>
+                    <div class="default-pizzas" id="cheese-default-size">
+                      <button type="btn" class="btn btn-danger indiv-pizza-default" id="cheese-sm">Small 10"</button>
+                      <button type="btn" class="btn btn-danger indiv-pizza-default" id="cheese-md">Medium 14"</button>
+                      <button type="btn" class="btn btn-danger indiv-pizza-default" id="cheese-lg">Large 18"</button>
+                    </div>
+                  </div>
+                  <div class="col-xs-4">
+                        <button type="btn" class="btn btn-success pizza-option" id="pep-default">Pepp. Pizza</button>
+                        <div class="default-pizzas" id="pep-default-size">
+                          <button type="btn" class="btn btn-danger indiv-pizza-default" id="pep-sm">Small 10"</button>
+                          <button type="btn" class="btn btn-danger indiv-pizza-default" id="pep-md">Medium 14"</button>
+                          <button type="btn" class="btn btn-danger indiv-pizza-default" id="pep-lg">Large 18"</button>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <button type="btn" class="btn btn-success pizza-option" id="veggie-default">Veggie Pizza</button>
+                        <div class="default-pizzas" id="veggie-default-size">
+                          <button type="btn" class="btn btn-danger indiv-pizza-default" id="veggie-sm">Small 10"</button>
+                          <button type="btn" class="btn btn-danger indiv-pizza-default" id="veggie-md">Medium 14"</button>
+                          <button type="btn" class="btn btn-danger indiv-pizza-default" id="veggie-lg">Large 18"</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="btn" class="btn btn-primary" id="custom-pizza-btn">Custom Pizza</button>
+                    <!-- Custom Pizza Form Start -->
+          <form class="form-group" id="custom-pizza">
+                <div id="form-content">
+                  <h3 id="form-header">Custom Pizza Form</h3>
+                  <div class="row container">
+                    <div class="col-xs-6"><p>Size</p></div>
+                    <div class="col-xs-6" class="form-option">
+                      <select required class="form-control" id="size">
+                        <option></option>
+                        <option value="Small 10 in.">Small, 10"</option>
+                        <option value="Medium 14 in.">Medium, 14"</option>
+                        <option value="Large 18 in.">Large, 18"</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row container">
+                    <div class="col-xs-6"><p>Sauce</p></div>
+                    <div class="col-xs-6" class="form-option">
+                      <select required class="form-control" id="sauce">
+                        <option></option>
+                        <option value="tomato sauce">Tomato</option>
+                    <option value="alfredo sauce">Alfredo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row container">
+                <div class="col-xs-6"><p>Cheese</p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="cheese">
+                    <option></option>
+                    <option value="cheese">Cheese</option>
+                    <option value="light cheese">Light Cheese</option>
+                    <option value="extra cheese">Extra Cheese</option>
+                    <option value="no cheese">None</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row container">
+                <div class="col-xs-6"><p>Veggie 1 (+$1)</p></div>
+                <div class="col-xs-6" class="form-option">
+                  <select required class="form-control" id="veggie1">
+                    <option></option>
+                    <option value="onions">Onions</option>
+                    <option value="green peppers">Green Peppers</option>
+                    <option value="olives">Black Olives</option>
+                    <option value="spinach">Spinach</option>
+                    <option value="mushrooms">Mushrooms</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row container">
+              <div class="col-xs-6"><p>Veggie 2 (+$1)</p></div>
+              <div class="col-xs-6" class="form-option">
+                <select required class="form-control" id="veggie2">
+                  <option></option>
+                  <option value="onions">Onions</option>
+                  <option value="green peppers">Green Peppers</option>
+                  <option value="olives">Black Olives</option>
+                  <option value="spinach">Spinach</option>
+                  <option value="mushrooms">Mushrooms</option>
+                </select>
+              </div>
+            </div>
+            <div class="row container">
+              <div class="col-xs-6"><p>Meat (+$2)</p></div>
+              <div class="col-xs-6" class="form-option">
+                <select required class="form-control" id="meat">
+                  <option></option>
+                  <option value="chicken">Chicken</option>
+                  <option value="pepperoni">Pepperoni</option>
+                  <option value="bacon">Canadian Bacon</option>
+                  <option value="sausage">Sausage</option>
+                </select>
+            </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-danger" id="submit-custom-pizza">Place Order</button>
+    </form>
+<!-- Custom Pizza Form End -->
+  </div>
+  <div class="col-xs-2">
+    <h2>Sides</h2>
+    <button type="btn" class="btn btn-info side-option" id="breadsticks">Breadsticks</button>
+    <button type="btn" class="btn btn-info side-option" id="brownie">Brownie</button>
+    <button type="btn" class="btn btn-info side-option" id="soda">Italian Soda</button>
+  </div>
+<!-- Cart Start -->
+  <div class="col-xs-4" id="price-content">
+    <h1 class="page-header">Cart</h1>
+    <h2>Price: $ <span id="final-cost"></span></h2>
+    <div id="order-details">
+      <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
+      <ul id="pizza-details"></ul>
+      <p><a id="default-pizza-dropdown">Pizza</a></p>
+      <ul id="default-pizza-details"></ul>
+      <p><a id="sides-dropdown">Sides</a></p>
+      <ul id="sides-details"></ul>
+    </div>
+    <button type="btn" class="btn btn-danger" id="checkout-btn">Checkout</button>
+    <h3><span id="delivery-option"></span></h3>
+  </div>
+  <!-- Cart End -->
+</div>
+</div>
+<!-- Order Content End -->
+<footer>
+  2019
+</footer>
+    
+</body>
+</html>
