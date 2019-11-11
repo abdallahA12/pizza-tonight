@@ -17,27 +17,26 @@
     <title>PIZZA-TONIGHT</title>
 </head>
 <body>
+  <section>
   <!-- images-->
     <!-- Navbar Start -->
           <div class="nav">
             <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
               <div class="container">
-                <a href="index.html"><div class="navbar-text pull-left"><h3>PIZZA TONIGHT</h3></div></a>
+                <a href="pizza-tonight.html"><div class="navbar-text pull-left"><h3>PIZZA TONIGHT</h3></div></a>
                 <div class="navbar-text pull-right"><a href="image/twitter.png"><i class="fa fa-twitter fa-4x"></i></a></div>
                 <div class="navbar-text pull-right"><a href="image/pinterest.png"><i class="fa fa-pinterest fa-4x"></i></a></div>
               </div>
             </nav>
-          </div>
+          </div>      
       <!-- Navbar End -->
       <!-- Landing Start -->
         <div class="jumbotron" id="landing-content">
             <h1 class="page-header">PIZZA TONIGHT</h1>
-            <h2 id="landing-tagline">PIZZA TONIGHT,ENJOY YOUR NIGHT.</h2>
-        <div class="img">
-          hawallian
+            <h2 id="landing-tagline">PIZZA TONIGHT,ENJOY YOUR NIGHT</h2>
+        <div class="img" id="img">
             <img src="image/home.jpeg">
-        </div>
-      
+        </div>   
 <!-- Order Content Start -->
     <div class="jumbotron" id="order-content">
                     <button type="btn" class="btn btn-primary" id="custom-pizza-btn">ORDER NOW</button><br>
@@ -61,15 +60,14 @@
                   </div>
             </div>
                 <div id="form-content">
-                  <h3 id="form-header">Custom Pizza Form</h3>
                   <div class="row container">
                     <div class="col-xs-6"><p>SIZE</p></div>
                     <div class="col-xs-6" class="form-option">
                       <select required class="form-control" id="size">
                         <option></option>
-                        <option value="Small 10 in.">Small, 10"</option>
-                        <option value="Medium 14 in.">Medium, 14"</option>
-                        <option value="Large 18 in.">Large, 18"</option>
+                        <option value="Small 10 in.">Small, 10" @500</option>
+                        <option value="Medium 14 in.">Medium, 14" @800 </option>
+                        <option value="Large 18 in.">Large, 18" @1000 </option>
                       </select>
                     </div>
                 </div>
@@ -88,9 +86,9 @@
                 <div class="col-xs-6" class="form-option">
                   <select required class="form-control" id="crust">
                     <option></option>
-                    <option value="crispy">crispy</option>
-                    <option value="stuffed">stuffed</option>
-                    <option value="gluten-free">gluten-free</option>
+                    <option value="crispy">crispy @150</option>
+                    <option value="stuffed">stuffed @150</option>
+                    <option value="gluten-free">gluten-free @150</option>
                     <option value="none">none</option>
                   </select>
                 </div>
@@ -100,10 +98,10 @@
                   <div class="col-xs-6" class="form-option">
                       <select required class="form-control" id="toppings">
                           <option></option>
-                          <option value="cheese">cheese</option>
-                          <option value="tomato">tomato</option>
-                          <option value="chicken">chicken</option>
-                          <option value="marinatted onions">marinatted onions</option>
+                          <option value="cheese">cheese @150</option>
+                          <option value="tomato">tomato @150</option>
+                          <option value="chicken">chicken @150</option>
+                          <option value="marinatted onions">marinatted onions @150</option>
                       </select>
                   </div>
           </div>
@@ -125,7 +123,7 @@
                      <div class="col-xs-6" class="form-option">
                           <select required class="form-control" id="delivery">
                              <option></option>
-                             <option value="Yes">Yes</option>
+                             <option value="Yes">Yes @150</option>
                              <option value="No">No</option>
                           </select>
                      </div>
@@ -134,7 +132,7 @@
       <button type="submit" class="btn btn-danger" id="submit-custom-pizza">PLACE ORDER</button>
       </form>
 <!-- Custom Pizza Form End -->
-    </div>
+    </div> 
   <div class="col-xs-2" id="additions">
          <h2>ADDITIONS</h2>
          <button type="btn" class="btn btn-info side-option" id="soda">soda</button>
@@ -143,8 +141,7 @@
   </div>
 <!-- Cart Start -->
   <div class="col-xs-4" id="price-content">
-         <h1 class="page-header">Cart</h1>
-         <h2>Price: ksh <span id="final-cost"></span></h2>
+         <h1>Price: ksh <span id="final-cost"></span></h1>
               <div id="order-details">
                   <p><a id="pizza-details-dropdown">Custom Pizza</a></p>
                   <ul id="pizza-details"></ul>
@@ -159,6 +156,7 @@
   <!-- Cart End -->
 </div>
 <!-- Order Content End -->
+</section>
 <!-- Footer Start -->
          <div class="nav">
                 <nav class="navbar navbar-inverse navbar-fixed-bottom" id="footer">

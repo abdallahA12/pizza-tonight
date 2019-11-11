@@ -73,13 +73,13 @@ $(document).ready(function(event) {
       });
       $("form#custom-pizza").submit(function(event) {
         event.preventDefault();
-        var customSize = $("select#size").val();
-        var option = $("select#sauce").val();
-        var crust = $("select#cheese").val();
-        var toppings = $("select#veggie1").val();
-        var number = $("select#veggie2").val();
-        var delivery = $("select#meat").val();
-        var pizzaDetails = (customSize + " - " + option + ", " + crust + ", " + toppings + ", " + number + ", " + delivery);
+        var size = ksh("select#size").val();
+        var option = ksh("select#sauce").val();
+        var crust = ksh("select#cheese").val();
+        var toppings = ksh("select#veggie1").val();
+        var number = ksh("select#veggie2").val();
+        var delivery = ksh("select#meat").val();
+        var pizzaDetails = (size + ", " + option + ", " + crust + ", " + toppings + ", " + number + ", " + delivery);
         var newPizzaOrder = new Order(customSize, cheese);
         newPizzaOrder.pizzaCost();
         totalPriceArray.push(newPizzaOrder.pizzaPrice);

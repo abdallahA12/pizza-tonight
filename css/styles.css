@@ -13,6 +13,28 @@ margin-left: 40%;
 .navbar-text pull-left{
 margin-left: 35%;
 }
-#body {
-  background-color: beige;
+body {
+  background-image: url("../i"), url("paper.gif");
+  background-color: #12af46;
+}
+.page-header {
+margin-left: 39%;
+}
+#landing-tagline{
+margin-left: 29%;
+}
+img {
+width: 100%;
+}
+.btn btn-danger{
+margin-left: 45%;
+}
+#page-header{
+  margin-right: 49%;
+}
+.bcc {
+  background-image: url(../image/home.jpeg);
+}
+#btn btn-primary{
+margin-left: 50%
 }
